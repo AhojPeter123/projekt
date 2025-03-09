@@ -1,5 +1,6 @@
 #include "Set.h"
 
+
 // Getter pre minimum
 double& Set::getMin() {
     return min_;
@@ -38,4 +39,11 @@ std::vector<Point>& Set::getAttributes() {
 // Setter pre atribúty
 void Set::setAttributes(std::vector<Point> attributes) {
     attributes_ = attributes;
+}
+
+void Set::sort() {
+    std::sort(attributes_.begin(), attributes_.end(),
+        [](const Point& a, const Point& b) {
+            return a.value < b.value;
+        });
 }

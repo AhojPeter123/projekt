@@ -12,7 +12,7 @@
 class Loader {
 
 public:
-    std::vector<Set>load(std::string filepath);
+    std::vector<Set> load(std::string filepath, char delimiter);
 
 private:
     double toDouble(std::string s);
